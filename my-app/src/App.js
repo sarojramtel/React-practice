@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Stock from "./Stock"
 
 function App() {
   const person ={
@@ -12,6 +13,10 @@ function App() {
   const scores = [20,23,25,23,22,12]
   return (
     <div className="App">
+      <h1>
+      <Stock />
+      </h1>
+      <h1><Stock securityName="abcd" symbol="ABCD" lastTradedPrice="3444" /></h1>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -31,6 +36,7 @@ function App() {
           {scores.map(s=><li>{s}</li>)}
         </ul>
       </header>
+      
     </div>
   );
 }
